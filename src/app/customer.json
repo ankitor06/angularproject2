@@ -1,0 +1,20 @@
+{
+  "customer": [
+    {
+      "cust_name": "aaaaa",
+      "cust_email": "a@g",
+      "cust_age": 43,
+      "cust_address": "NEW GILANI NAGAR UDAYGIRI APARTMENT",
+      "cust_password": "",
+      "id": 1
+    },
+    {
+      "cust_name": null,
+      "cust_email": null,
+      "cust_age": "",
+      "cust_address": "",
+      "cust_password": "",
+      "id": 2
+    }
+  ]
+}

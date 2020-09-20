@@ -1,0 +1,13 @@
+header{
+    align-items: center;
+    align-content: center;
+}
+.hero{
+    align-content: center;
+    background-color: rgb(236, 114, 32);
+}
+.nav button{
+    padding: 10px;
+    background-color:rgb(252, 249, 63);
+    
+}

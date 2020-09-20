@@ -1,0 +1,65 @@
+<div class="jumbotron">
+    <div class="table table bordered bg-dark text-primary">
+        <div class="row justify-content-center">
+            <div class="col-md-12 bg-white text-left py-3 rounded shadow">
+    <form [formGroup]="form" (ngSubmit)="register()">
+        
+        <div>
+            <label>name:</label>
+            <input type="text" placeholder="enter name" formControlName="cust_name">
+            <small class="text-danger" 
+            *ngIf="!form.get('cust_name').valid && form.get('cust_name').touched">
+            enter valid email</small>
+        </div>
+        
+        <div>
+            <label>email:</label>
+            <input type="text" placeholder="enter email" formControlName="cust_email">
+            <small class="text-danger" 
+            *ngIf="!form.get('cust_email').valid && form.get('cust_email').touched">
+            enter valid email</small>
+        </div>
+       
+        <div> 
+            <label>age:</label>
+            <input type="number" placeholder="enter nage" formControlName="cust_age">
+        </div>
+        
+        <div>
+            <label>address:</label>
+            <input type="text" placeholder="enter address" formControlName="cust_address">
+        </div>
+       
+        <div> 
+            <label>password:</label>
+            <input type="number" placeholder="enter password" formControlName="cust_password">
+        </div>
+   
+    <div>
+        <button type="submit" class="btn btn-success">Register</button>
+        <button type="reset" class="btn btn-danger">Clear All</button>
+        
+    </div>
+    </form>
+    </div>
+</div>
+</div>
+</div>
+<table class="table table-borderd table-hover table-striped">
+    <thead>
+    <tr>
+        <th>customer name</th>
+        <th>customer email</th>
+        <th>customer age</th>
+        <th>customer address</th>
+        
+    </tr></thead>
+    <tbody>
+        <tr *ngFor="let c of customer">
+            <td>{{c.cust_name}}</td>
+            <td>{{c.cust_email}}</td>
+            <td>{{c.cust_age}}</td>
+            <td>{{c.cust_address}}</td>
+        </tr>
+    </tbody>
+</table>

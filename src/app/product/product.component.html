@@ -1,0 +1,65 @@
+
+<div class="page area">
+  <div  class="text-center">
+  <h1>Buy Your Mobile Product</h1></div>
+  <div class="alert alert-light border d-flex" *ngIf="addedProduct">
+    <strong class="text-success">{{addedProduct}} </strong>is selected and added in cart
+    <a class="btn btn-success ml-auto" href="/cart">checkout</a>
+  </div>
+
+<hr class="mb-3">
+ <div class="row">
+        <div class="card"><br>
+            <img src="../../assets/iph.jpg" class="card-img-top" alt="iphone">
+            <div class="card-body">
+              <h5 class="card-title">iphone</h5>
+              <p class="card-text">In Your Budjet</p>&nbsp;
+              <a class="btn btn-primary" href="/iphone">features</a>
+              <button class="btn btn-primary" (click)="onSelectProduct('iphone')">select this Product</button>            
+            </div>
+          </div>
+    
+
+        <div class="card">
+            <img src="../../assets/redmi3.jpg" class="card-img-top" alt="redmi">
+            <div class="card-body">
+              <h5 class="card-title">redmi</h5>
+              <p class="card-text">In Your Budjet</p>
+              <a class="btn btn-primary" href="/redmi">features</a>&nbsp;
+              <button class="btn btn-primary" (click)="onSelectProduct('redmi')">select this Product</button>            
+            </div>
+          </div>
+    
+
+        <div class="card">
+            <img src="../../assets/sam.jpg" class="card-img-top" alt="samsung">
+            <div class="card-body">
+              <h5 class="card-title">samsung</h5>
+              <p class="card-text">In Your Budjet</p>
+              <a class="btn btn-primary" href="/samsung">features</a>&nbsp;
+              <button class="btn btn-primary" (click)="onSelectProduct('samsung')">select this Product</button>            
+            </div>
+          </div>
+   
+
+        <div class="card">
+            <img src="../../assets/oppo.jpg" class="card-img-top" alt="oppo">
+            <div class="card-body">
+              <h5 class="card-title">oppo</h5>
+              <p class="card-text">In Your Budjet</p>
+              <a class="btn btn-primary" href="/oppo">features</a>&nbsp;
+              <button class="btn btn-primary" (click)="onSelectProduct('oppo')">select this Product</button>
+            </div>
+          </div>
+          <div class="card"><div class="card-body" style="position: 20rem;"><br>
+            <img src="../../assets/ty.jpg" class="card-img-top"></div>
+            <h1>Thank You For Letting Us Help You</h1>
+          </div>
+    </div>
+    <div class="col-md-11 bg-success text-white text-center">
+      <h2 *ngIf="!productSelected">select any product</h2>
+      <h3 *ngIf="productSelected">{{selectedProduct}} is selected</h3>
+      <button class="btn" (click)="onAddProduct()">add to cart</button>
+    </div>
+</div>
+<app-footer></app-footer>
